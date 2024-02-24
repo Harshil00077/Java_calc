@@ -1,2 +1,2 @@
-localhost ansible_user=dart ansible_ssh_pass=1020
+localhost ansible_user=dart
 ansible_ssh_common_args = '-o StrictHostKeyChecking=no'
