@@ -4,7 +4,7 @@
   remote_user: dart
   become: false
   tasks:
-    - name: Pull Docker Image
+    - name: Pull Docker ImageS
       docker_image:
         name: "harshil00077/temp-integration"
         source: pull

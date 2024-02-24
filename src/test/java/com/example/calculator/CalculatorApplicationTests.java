@@ -4,37 +4,35 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
 @SpringBootTest
 class CalculatorApplicationTests {
     @Test
-    public void testAddition() {
-        double result = CalculatorApplication.add(5, 3);
-        Assertions.assertEquals(8, result);
+    public void testPower() {
+        double result = CalculatorApplication.power(5, 3);
+        Assertions.assertEquals(125, result);
     }
 
 
     @Test
-    public void testSubtraction() {
-        double result = CalculatorApplication.subtract(5, 3);
-        Assertions.assertEquals(2, result);
-    }
-
-    @Test
-    public void testMultiplication() {
-        double result = CalculatorApplication.multiply(5, 3);
-        Assertions.assertEquals(15, result);
-    }
-
-    @Test
-    public void testDivision() {
-        double result = CalculatorApplication.divide(10, 2);
-        Assertions.assertEquals(5, result);
-    }
-
-    @Test
-    public void testDivisionByZero() {
-        Assertions.assertThrows(IllegalArgumentException.class, () -> {
-            CalculatorApplication.divide(10, 0);
+    public void testFactorial() {
+        double result = CalculatorApplication.factorial(5);
+        Assertions.assertEquals(120, result);
+        assertThrows(IllegalArgumentException.class, () -> {
+            CalculatorApplication.factorial(-1);
         });
+    }
+
+    @Test
+    public void testNaturlLog() {
+        double result = CalculatorApplication.naturalLog(Math.E);
+        Assertions.assertEquals(1, result);
+    }
+
+    @Test
+    public void testSqrt() {
+        double result = CalculatorApplication.squareRoot( 25);
+        Assertions.assertEquals(5, result);
     }
 }

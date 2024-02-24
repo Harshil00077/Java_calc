@@ -1,6 +1,5 @@
 pipeline {
     agent any
-
     tools {
         maven 'Maven'
     }
@@ -23,8 +22,7 @@ pipeline {
                 script{
                     withCredentials([string(credentialsId: 'temp1', variable: 'temp1')]) {
                     sh 'docker login -u harshil00077 -p ${temp1}'
-    // some block
-}
+                    }
                     sh 'docker push harshil00077/temp-integration'
 
                 }
@@ -38,7 +36,6 @@ pipeline {
                         }
                     }
                 }
-
         stage('Run Ansible Playbook') {
             steps {
                 script {
