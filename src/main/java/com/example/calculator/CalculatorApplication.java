@@ -13,7 +13,7 @@ public class CalculatorApplication {
         SpringApplication.run(CalculatorApplication.class, args);
         Scanner scanner = new Scanner(System.in);
         char operator;
-
+    // demo
         while (true) {
             System.out.println("Choose an operation:");
             System.out.println("1. Factorial");
