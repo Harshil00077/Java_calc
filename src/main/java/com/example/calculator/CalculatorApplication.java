@@ -16,7 +16,7 @@ public class CalculatorApplication {
 
         while (true) {
             System.out.println("Choose an operation:");
-            System.out.println("1. Factorial   ");
+            System.out.println("1. Factorial  (!)");
             System.out.println("2. Power (^)");
             System.out.println("3. Natural Log (ln)");
             System.out.println("4. Square Root (√)");
