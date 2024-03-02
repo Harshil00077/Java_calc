@@ -21,7 +21,7 @@ public class CalculatorApplication {
             System.out.println("3. Natural Log (ln)");
             System.out.println("4. Square Root (√)");
             System.out.println("5- Exit\n");
-            // hi
+    
             operator = scanner.next().charAt(0);
 
             if (operator >= '5') {
