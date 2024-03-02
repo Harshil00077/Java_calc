@@ -28,7 +28,7 @@ pipeline {
                 }
             }
         }
-        stage('Stop and Remove Existing Container') {
+        stage('Remove Existing Container') {
                     steps {
                         script {
                             // Stop and remove existing container if it exists
