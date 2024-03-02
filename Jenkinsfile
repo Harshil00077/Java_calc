@@ -31,7 +31,6 @@ pipeline {
         stage('Remove Existing Container') {
                     steps {
                         script {
-                            // Stop and remove existing container if it exists
                             sh 'docker rm -f calc || true'
                         }
                     }
